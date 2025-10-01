@@ -1,23 +1,23 @@
 package com.pluralsight;
 
 public class CellPhone {
-private int serialNumber;
-private String model;
-private String carrier;
-private String phoneNumber;
-private String owner;
+    private int serialNumber;
+    private String model;
+    private String carrier;
+    private String phoneNumber;
+    private String owner;
 
-public CellPhone() {
-    this.serialNumber = 0;
-    this.model = "";
-    this.carrier = "";
-    this.phoneNumber = "";
-    this.owner = "";
-}
+    public CellPhone() {
+        this.serialNumber = 0;
+        this.model = "";
+        this.carrier = "";
+        this.phoneNumber = "";
+        this.owner = "";
+    }
 
-public int getSerialNumber(){
-    return serialNumber;
-}
+    public int getSerialNumber() {
+        return serialNumber;
+    }
 
     public void setSerialNumber(int serialNumber) {
         this.serialNumber = serialNumber;
@@ -30,6 +30,7 @@ public int getSerialNumber(){
     public void setModel(String model) {
         this.model = model;
     }
+
     public String getCarrier() {
         return carrier;
     }
@@ -52,6 +53,18 @@ public int getSerialNumber(){
 
     public void setOwner(String owner) {
         this.owner = owner;
+
+    }
+
+    public void dial(String phoneNumber) {
+        System.out.println(this.owner + "'s phone is calling " + phoneNumber);
+    }
+
+    public static void display(CellPhone phone) {
+        System.out.println("Serial Number: " + phone.getSerialNumber());
+        System.out.println("Model: " + phone.getModel());
+        System.out.println("Carrier: " + phone.getCarrier());
+        System.out.println("Phone Number: " + phone.getPhoneNumber());
+        System.out.println("Owner: " + phone.getOwner());
     }
 }
-
