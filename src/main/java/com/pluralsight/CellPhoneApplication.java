@@ -12,9 +12,9 @@ public class CellPhoneApplication {
 
         userPhoneTwo.setSerialNumber(0);
         userPhoneTwo.setPhoneNumber("7279066299");
-        userPhoneTwo.setOwner("Personal cell");
+        userPhoneTwo.setOwner("vanessa");
         userPhoneTwo.setCarrier("T-Mobile");
-        userPhoneTwo.setModel("Mobile number");
+        userPhoneTwo.setModel("Iphone");
 
         System.out.print("What is the serial number? ");
         int serialNumber = scan.nextInt();
@@ -42,6 +42,10 @@ public class CellPhoneApplication {
 
         userPhoneOne.dial(userPhoneTwo.getPhoneNumber());
         userPhoneTwo.dial(userPhoneOne.getPhoneNumber());
+
+        CellPhone userPhoneThree = new CellPhone(0, "iPhone 14 ", "t-mobile", "7279066200", "Max");
+        CellPhone.display(userPhoneThree);
+        userPhoneOne.dial(userPhoneThree.getPhoneNumber());
 
         }
     }
